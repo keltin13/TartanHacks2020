@@ -173,24 +173,20 @@ def conclude_bet(bet_id, filepath):
         for user in data["user-bets"]:
             for bet in data["user-bets"][user]:
                 if bet["bet_id"] == bet_id:
-                    if (data["user-bets"][user][bet_id]["team"] == data[
-                        "bets"][curr_league][bet_id]["winner"]):
+                    if (bet["team"] == data["bets"][curr_league][bet_id]["winner"]):
                         if (data["bets"][curr_league][bet_id]["winner"] ==
                             data["bets"][curr_league][bet_id]["team-1"]):
-                            data["user-bets"][user][bet_id]["net"] = (data["user-bets"][user][bet_id]["value"]
-                                   /abs(data["bets"][curr_league][bet_id][
-                                            "odds1"]))
+                            bet["net"] = 100 * (bet["value"] / abs(data["bets"][curr_league][bet_id]["odds1"]))
                         else:
-                            data["user-bets"][user][bet_id]["net"] = (data["user-bets"][user][bet_id]["value"]
-                            / abs(data["bets"][curr_league][bet_id]["odds1"]))
-                        data["user-bets"][user][bet_id]["winnings"] = data[
-                            "user-bets"][user][bet_id]["net"] + data[
-                            "user-bets"][user][bet_id]["value"]
+                            bet["net"] = 100 * (bet["value"] / abs(data["bets"][curr_league][bet_id]["odds2"]))
+                        bet["winnings"] = bet["net"] + bet["value"]
                     else:
-                        data["user-bets"][user][bet_id]["net"] = -1 * data["user-bets"][user][bet_id]["value"]
-                        data["user-bets"][user][bet_id]["winnings"] = 0
-                    data["user-bets"][user][bet_id]["net"] = round(data["user-bets"][user][bet_id]["net"], 2)
-                    data["user-bets"][user][bet_id]["winnings"] = round(data["user-bets"][user][bet_id]["winnings"], 2)
+                        bet["net"] = -1 * bet["value"]
+                        bet["winnings"] = 0
+                    bet["net"] = round(bet["net"], 2)
+                    bet["winnings"] = round(bet["winnings"], 2)
+    with open(filepath, 'w') as json_file:
+        json.dump(data, json_file, indent=4)
 
 def get_bets_by_league(league, filepath):
     return retrieve_database(filepath)["bets"][league]
