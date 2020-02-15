@@ -7,6 +7,7 @@ from random import randint
 import sys
 from app.database.scrape import *
 from app.database.main import *
+from app.userstats import *
 
 # Home Page
 @app.route('/')
@@ -94,6 +95,6 @@ def ncaab():
     return render_template('ncaab.html', title='SafeBet - NCAAB', forms=forms, live_bets=live_bets)
 
 @app.route('/leaderboard')
-def index():
-    
-    return render_template('leaderboard.html', title='Leaderboard')
+def leaderboard():
+    leaderboard = calc_leaderboard()
+    return render_template('leaderboard.html', title='Leaderboard', leaderboard=leaderboard)

@@ -2,7 +2,7 @@
 from data import *
 
 
-def leaderboard():
+def calc_leaderboard():
     users = retrieve_database("data.json")["users"]
     ids = []
     money = []
@@ -16,8 +16,8 @@ def leaderboard():
     result.reverse()
     print (result)
     return result
-    
-    
+
+
 # from https://www.cs.cmu.edu/~112/notes/notes-efficiency.html
 
 def merge(a, b, start1, start2, end):
