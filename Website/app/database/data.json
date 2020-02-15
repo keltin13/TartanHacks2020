@@ -3,20 +3,20 @@
         "000001": {
             "username": "keltin_7",
             "total": 8000.1,
-            "total-history" : [],
-            "password_hash" : "example"
+            "total-history": [],
+            "password_hash": "example"
         },
         "508234": {
             "username": "RonSwanson",
             "total": -500.4,
-            "total-history" : [],
-            "password_hash" : "secondexample"
+            "total-history": [],
+            "password_hash": "secondexample"
         },
         "012345": {
             "username": "peepee",
             "total": 12.5,
-            "total-history" : [],
-            "password_hash" : "thirdexample"
+            "total-history": [],
+            "password_hash": "thirdexample"
         }
     },
     "user-bets": {
@@ -39,29 +39,39 @@
             }
         ]
     },
-    "bets": {"NCAA": {
-        "000001": {
-            "team-1": "Clippers",
-            "team-2": "Celtics",
-            "line1": 1,
-            "line2": -1,
-            "odds1": -109,
-            "odds2": -112,
-            "winner": "None",
-            "timestamp": 0
+    "bets": {
+        "NCAA": {
+            "000001": {
+                "team-1": "Clippers",
+                "team-2": "Celtics",
+                "line1": 1,
+                "line2": -1,
+                "odds1": -109,
+                "odds2": -112,
+                "winner": "None",
+                "timestamp": 0
+            },
+            "234798": {
+                "team-1": "Duke",
+                "team-2": "UNC",
+                "line1": -8.5,
+                "line2": 8.5,
+                "odds1": -110,
+                "odds2": -110,
+                "winner": "Duke",
+                "timestamp": 0
+            },
+            "00000": {
+                "team-1": "Cal Irvine",
+                "team-2": "Hawaii",
+                "line1": -2.5,
+                "line2": 2.5,
+                "odds1": -115.0,
+                "odds2": -105.0,
+                "winner": "None",
+                "timestamp": 1581781081.6593523
+            }
         },
-        "234798": {
-            "team-1": "Duke",
-            "team-2": "UNC",
-            "line1": -8.5,
-            "line2": 8.5,
-            "odds1": -110,
-            "odds2": -110,
-            "winner": "Duke",
-            "timestamp": 0
-        }
-    },
-        "hockey": {
-        }
+        "hockey": {}
     }
 }
