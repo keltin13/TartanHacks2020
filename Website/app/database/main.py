@@ -54,8 +54,18 @@ database (dict)
 
 import json, time, copy
 import random
-#from scrape import *
+from scrape import *
 
+
+def timify(text):
+    text = text[:2] + text[3:6]
+    text = int(text) + 1200
+    seconds = time.time()
+    local_time = time.localtime(seconds)
+    hour = local_time.tm_hour
+    minute = local_time.tm_min
+    final = (hour * 100) + minute + text
+    return final
 
 def intify(text):
     if type(text) == int:
@@ -135,7 +145,7 @@ def update_bets(league, filepath):
                 bet["odds1"] = intify(point[2][0])
                 bet["odds2"] = intify(point[2][1])
                 bet["winner"] = "None"
-                bet["timestamp"] = time.time()
+                bet["timestamp"] = timify(point[-1])
                 data["bets"][league][bet_id] = bet
     with open(filepath, 'w') as json_file:
         json.dump(data, json_file, indent=4)
