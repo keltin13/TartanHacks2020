@@ -67,10 +67,15 @@ def visualize(bet_history, user_id):
         time.append(bet_history[i][0])
         money.append(bet_history[i][1])
         tracker.append(bet_history[i][2])
+        #print(time)
+        #print(money)
     plt.plot(time, money, color = 'r')
     plt.xlabel("TIME")
     plt.ylabel("WINNINGS")
     plt.title(f"{username} WINNINGS")
+    maxTime = time[len(time) - 1] * 1.1
+    maxMoney = max(money) * 1.1
+    plt.axis([0, maxTime, 0, maxMoney])
     plt.show()
     return plt
 
