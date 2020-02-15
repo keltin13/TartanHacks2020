@@ -4,10 +4,14 @@ from app import app
 from app.forms import *
 from app.models import User
 from random import randint
-import sys
+import sys, io
+from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+from matplotlib.figure import Figure
+from flask import Response
 from app.database.scrape import *
 from app.database.main import *
 from app.database.leaderboard import *
+from app.database.running_total import *
 
 # Home Page
 @app.route('/')
@@ -56,9 +60,13 @@ def register():
 @login_required
 def user(username):
     # Get the user from the database
-    user = User.query_username(username)
+    user = User.query_username(current_user.username)
+    print(user.id)
     bets = User.query_user_bets(user.id)
-    return render_template('user.html', user=user, bets=bets)
+    plot = visualize(running_total(user.id), user.id)
+    plot_url = f'C://Users/kelti/Documents/GitHub/TartanHacks2020/website/app/static/{user.id}.png'
+    plot.savefig(plot_url)
+    return render_template('user.html', user=user, bets=bets, plot_url=f'{user.id}.png')
 
 # Betting Divisions
 @app.route('/ncaab', methods=['GET', 'POST'])

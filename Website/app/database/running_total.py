@@ -2,13 +2,13 @@
 
 # userID is a string to access the database
 # database is dictionary, userID is the user's ID
-from data import *
+from app.database.main import *
 import matplotlib.pyplot as plt
 
 def running_total(user_id):
     bet_history = [(0,100, -1)]
     bankroll = 100
-    bets = get_user_bets(user_id, "data.json")
+    bets = get_user_bets(user_id, 'C://Users/kelti/Documents/GitHub/TartanHacks2020/website/app/database/data.json')
     for i in range(len(bets)):
         winnings = bets[i]["net"]
         curr_id = bets[i]["bet_id"]
@@ -59,7 +59,7 @@ def mergeSort(a, b):
         step *= 2
 
 def visualize(bet_history, user_id):
-    username = get_user_by_id(user_id, "data.json")["username"]
+    username = get_user_by_id(user_id, 'C://Users/kelti/Documents/GitHub/TartanHacks2020/website/app/database/data.json')["username"]
     time = []
     money = []
     tracker = []
@@ -71,7 +71,7 @@ def visualize(bet_history, user_id):
     plt.xlabel("TIME")
     plt.ylabel("WINNINGS")
     plt.title(f"{username} WINNINGS")
-    plt.show()
+    #plt.show()
     return plt
 
 '''
@@ -100,5 +100,3 @@ def create_figure():
 running_total("000001")
 visualize(running_total("000001"), "000001")
 '''
-
-
