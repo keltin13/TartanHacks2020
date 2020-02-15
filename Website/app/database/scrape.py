@@ -129,7 +129,6 @@ def websiteScraping(league):
             time_stamp = char
         containers[ite].append(time_stamp)
         ite += 1
-    print(containers)
     return containers
 
 def timeConversion(container):

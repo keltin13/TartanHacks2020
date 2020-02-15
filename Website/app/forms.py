@@ -13,12 +13,13 @@ class PlaceBetForm(FlaskForm):
     bet_id = HiddenField('Bet ID')
     team1 = HiddenField('Team 1')
     team2 = HiddenField('Team 2')
+    index = StringField('Enter the number below to confirm:')
     line1 = StringField('Line 1')
     line2 = StringField('Line 2')
     odds1 = StringField('Odds 1')
     odds2 = StringField('Odds 1')
-    bet = IntegerField('Bet Amount', validators=[DataRequired()])
-    team = SelectField('Team', validators=[DataRequired()])#, choices = [('left', 'Left'), ('right', 'Right')], validators=[DataRequired()])
+    bet = IntegerField('Bet Amount')
+    team = SelectField('Team')
     placeBet = SubmitField('Place Bet')
 
 class RegistrationForm(FlaskForm):
@@ -30,6 +31,6 @@ class RegistrationForm(FlaskForm):
 
     def validate_username(self, username):
         # Check for duplicates
-        user = User.query.filter_by(username=username.data).first()
+        user = User.query_username(username.data)
         if user is not None:
             raise ValidationError('Please use a different username.')
