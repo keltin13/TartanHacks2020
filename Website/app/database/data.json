@@ -2,7 +2,7 @@
     "users": {
         "000001": {
             "username": "keltin_7",
-            "total": 8000.1,
+            "total": 7948.490000000001,
             "total-history": [],
             "password_hash": "example"
         },
@@ -13,10 +13,18 @@
             "password_hash": "secondexample"
         },
         "012345": {
-            "username": "peepee",
+            "username": "teepee",
             "total": 12.5,
             "total-history": [],
             "password_hash": "thirdexample"
+        },
+        "153483": {
+            "username": "alexdwhite",
+            "total": 10,
+            "password_hash": "banana",
+            "total-history": [
+                10
+            ]
         }
     },
     "user-bets": {
@@ -26,16 +34,16 @@
                 "team": "Clippers",
                 "value": 100,
                 "winnings": 100,
-                "net": 0,
+                "net": 10,
                 "timestamp": 1581785537.545163
             },
             {
                 "bet_id": "001908",
                 "team": "Syracuse",
                 "value": 123,
-                "timestamp": 1581785537.545163,
+                "timestamp": 1581786037.545163,
                 "winnings": 123,
-                "net": 0
+                "net": -10
             },
             {
                 "bet_id": "697387",
@@ -43,7 +51,23 @@
                 "value": 50,
                 "timestamp": 1581786288.9877422,
                 "winnings": 50,
-                "net": 0
+                "net": 20
+            },
+            {
+                "bet_id": "834893",
+                "team": "Virginia Tech",
+                "value": 69,
+                "timestamp": 1581792883.073859,
+                "winnings": 0,
+                "net": -69
+            },
+            {
+                "bet_id": "121074",
+                "team": "Washington State",
+                "value": 20,
+                "timestamp": 1581793052.2133174,
+                "winnings": 37.39,
+                "net": 17.39
             }
         ],
         "508234": [
@@ -53,7 +77,7 @@
                 "value": 50,
                 "winnings": 95.45,
                 "net": 45.45,
-                "timestamp": 0
+                "timestamp": 1581793052.2133174
             }
         ]
     },
@@ -836,7 +860,7 @@
                 "line2": -3.5,
                 "odds1": -110.0,
                 "odds2": -110.0,
-                "winner": "None",
+                "winner": "Pittsburgh",
                 "timestamp": 1581810035.7471344
             },
             "173706": {
@@ -1186,7 +1210,7 @@
                 "line2": -7.0,
                 "odds1": -115.0,
                 "odds2": -105.0,
-                "winner": "None",
+                "winner": "Washington State",
                 "timestamp": 1581817235.7471344
             },
             "069355": {

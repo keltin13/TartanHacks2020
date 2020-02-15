@@ -34,3 +34,7 @@ class RegistrationForm(FlaskForm):
         user = User.query_username(username.data)
         if user is not None:
             raise ValidationError('Please use a different username.')
+
+class ConcludeBet(FlaskForm):
+    bet_id = StringField('Bet ID:', validators=[DataRequired()])
+    submit = SubmitField('Conclude')

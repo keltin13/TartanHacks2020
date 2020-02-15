@@ -14,5 +14,20 @@
     </p>
     {% endfor %}
     <br>
-    <img src={{ url_for('static',filename=plot_url) }} width='500'>
+    {% if plot_url != None %}
+        <img src={{ url_for('static',filename=plot_url) }} width='500'>
+    {% endif %}
+    <br>
+    <h1>Conclude a bet for testing purposes:</h1>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.bet_id.label }}<br>
+            {{ form.bet_id(size=32) }}<br>
+            {% for error in form.bet_id.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
 {% endblock %}

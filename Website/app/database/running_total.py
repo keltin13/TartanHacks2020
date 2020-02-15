@@ -6,9 +6,11 @@ from app.database.main import *
 import matplotlib.pyplot as plt
 
 def running_total(user_id):
-    bet_history = [(0,100, -1)]
+    bet_history = [(1581685537.545163,100, -1)]
     bankroll = 100
     bets = get_user_bets(user_id, 'C://Users/kelti/Documents/GitHub/TartanHacks2020/website/app/database/data.json')
+    if bets == None:
+        return None
     for i in range(len(bets)):
         winnings = bets[i]["net"]
         curr_id = bets[i]["bet_id"]
@@ -59,6 +61,8 @@ def mergeSort(a, b):
         step *= 2
 
 def visualize(bet_history, user_id):
+    if bet_history == None:
+        return None
     username = get_user_by_id(user_id, 'C://Users/kelti/Documents/GitHub/TartanHacks2020/website/app/database/data.json')["username"]
     time = []
     money = []
@@ -67,16 +71,15 @@ def visualize(bet_history, user_id):
         time.append(bet_history[i][0])
         money.append(bet_history[i][1])
         tracker.append(bet_history[i][2])
-        #print(time)
+        print(time)
         #print(money)
     plt.plot(time, money, color = 'r')
     plt.xlabel("TIME")
     plt.ylabel("WINNINGS")
     plt.title(f"{username} WINNINGS")
-    maxTime = time[len(time) - 1] * 1.1
+    maxTime = time[len(time) - 1]
     maxMoney = max(money) * 1.1
-    plt.axis([0, maxTime, 0, maxMoney])
-    plt.show()
+    #plt.axis([1581585537.545163, maxTime, 0, maxMoney])
     return plt
 
 '''

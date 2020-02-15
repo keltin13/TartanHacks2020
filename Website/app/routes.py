@@ -4,7 +4,7 @@ from app import app
 from app.forms import *
 from app.models import User
 from random import randint
-import sys, io
+import sys, io, os
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from matplotlib.figure import Figure
 from flask import Response
@@ -50,13 +50,13 @@ def register():
         id = randint(0,999999)
         user = User(id, form.username.data, form.password.data)
         #user.set_password(form.password.data)
-        update_users({'user_id':id, 'username':form.username.data, 'total':10, 'password_hash':form.password.data},
+        update_users({'user_id':id, 'username':form.username.data, 'total':100, 'password_hash':form.password.data},
                         'C://Users/kelti/Documents/GitHub/TartanHacks2020/website/app/database/data.json')
         login_user(user)
         return redirect(url_for('index'))
     return render_template('register.html', title='Register', form=form)
 
-@app.route('/user/<username>')
+@app.route('/user/<username>', methods=['GET', 'POST'])
 @login_required
 def user(username):
     # Get the user from the database
@@ -64,9 +64,20 @@ def user(username):
     print(user.id)
     bets = User.query_user_bets(user.id)
     plot = visualize(running_total(user.id), user.id)
-    plot_url = f'C://Users/kelti/Documents/GitHub/TartanHacks2020/website/app/static/{user.id}.png'
-    plot.savefig(plot_url)
-    return render_template('user.html', user=user, bets=bets, plot_url=f'{user.id}.png')
+    plot_url = None
+    if plot != None:
+        plot_url = f'C://Users/kelti/Documents/GitHub/TartanHacks2020/website/app/static/{user.id}.png'
+        if os.path.isfile(plot_url):
+            os.remove(plot_url)   # Opt.: os.system("rm "+strFile)
+        plot.savefig(plot_url)
+    form = ConcludeBet()
+    if form.validate_on_submit():
+        conclude_bet(form.bet_id.data,
+            'C://Users/kelti/Documents/GitHub/TartanHacks2020/website/app/database/data.json')
+        return redirect(url_for('user', username=current_user.username))
+    if plot_url != None:
+        plot_url = f'{user.id}.png'
+    return render_template('user.html', user=user, bets=bets, plot_url=plot_url, form=form)
 
 # Betting Divisions
 @app.route('/ncaab', methods=['GET', 'POST'])
