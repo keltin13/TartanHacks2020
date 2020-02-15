@@ -54,7 +54,7 @@ database (dict)
 
 import json, time, copy
 import random
-from scrape import *
+#from scrape import *
 
 
 def intify(text):

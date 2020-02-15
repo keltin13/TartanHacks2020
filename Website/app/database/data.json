@@ -27,6 +27,22 @@
                 "value": 100,
                 "winnings": 191.1,
                 "net": 91.1
+            },
+            {
+                "bet_id": "001908",
+                "team": "Syracuse",
+                "value": 123,
+                "timestamp": 1581785537.545163,
+                "winnings": 123,
+                "net": 0
+            },
+            {
+                "bet_id": "697387",
+                "team": "Ohio State",
+                "value": 50,
+                "timestamp": 1581786288.9877422,
+                "winnings": 50,
+                "net": 0
             }
         ],
         "508234": [
