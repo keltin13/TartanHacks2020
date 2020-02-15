@@ -3,17 +3,20 @@
         "000001": {
             "username": "keltin_7",
             "total": 8000.1,
-            "total-history" : []
+            "total-history" : [],
+            "password_hash" : "example"
         },
         "508234": {
             "username": "RonSwanson",
             "total": -500.4,
-            "total-history" : []
+            "total-history" : [],
+            "password_hash" : "secondexample"
         },
         "012345": {
             "username": "peepee",
             "total": 12.5,
-            "total-history" : []
+            "total-history" : [],
+            "password_hash" : "thirdexample"
         }
     },
     "user-bets": {
@@ -36,7 +39,7 @@
             }
         ]
     },
-    "bets": {
+    "bets": {"NCAA": {
         "000001": {
             "team-1": "Clippers",
             "team-2": "Celtics",
@@ -56,6 +59,9 @@
             "odds2": -110,
             "winner": "Duke",
             "timestamp": 0
+        }
+    },
+        "hockey": {
         }
     }
 }

@@ -56,6 +56,13 @@ import json, time, copy
 import random
 from scrape import *
 
+def intify(text):
+    if text[0] == "+":
+        text = text[1:]
+    if text[-1] == "½":
+        text = text[:-1] + ".5"
+    return int(text)
+
 def update_users(user, filepath):
     new_user = copy.deepcopy(user)
     new_user.pop("user_id")
@@ -74,14 +81,14 @@ def get_user_by_id(user_id, filepath):
         if user_id in data["users"]:
             return data["users"][user_id]
 
-
 def get_user_by_name(username, filepath):
     with open(filepath, 'r') as json_file:
         data = json.load(json_file)
         for user_id in data["users"]:
             if data["users"][user_id]["username"] == username:
-                return data["users"][user_id]
-
+                curr_user = copy.deepcopy(data["users"][user_id])
+                curr_user["user_id"] = user_id
+                return curr_user
 
 def get_user_bets(user_id, filepath):
     with open(filepath, 'r') as json_file:
@@ -89,19 +96,25 @@ def get_user_bets(user_id, filepath):
         if user_id in data["bets"]:
             return data["bets"][user_id]
 
-
 def update_bets(league, filepath):
     raw = websiteScraping(league)
     with open(filepath, 'r') as json_file:
         data = json.load(json_file)
-        bet_id = str(format(random.randint(0, 999999), '05d'))
-        while bet_id in data["bets"]:
-            bet_id = str(format(random.randint(0, 999999), '05d'))
         for point in raw:
             bet = {}
             if type(point) == list:
+                bet_id = str(format(random.randint(0, 999999), '05d'))
+                while bet_id in data["bets"]:
+                    bet_id = str(format(random.randint(0, 999999), '05d'))
                 bet["team1"] = point[0]
                 bet["team2"] = point[1]
+                bet["line1"] = intify(point[3][0])
+                bet["line2"] = intify(point[3][1])
+                bet["odds1"] = intify(point[2][0])
+                bet["odds2"] = intify(point[2][1])
+                bet["winner"] = "None"
+                bet["timestamp"] = time.time()
+                data["bets"][bet_id] = bet
 
 def new_user_bets(user_bet, filepath):
     bet = copy.deepcopy(user_bet)
