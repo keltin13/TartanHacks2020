@@ -70,11 +70,11 @@ def visualize(bet_history, user_id):
     plt.plot(time, money, color = 'r')
     plt.xlabel("TIME")
     plt.ylabel("WINNINGS")
-    plt.title(f"")
+    plt.title(f"{username} WINNINGS")
     plt.show()
 
 
 running_total("000001")
-visualize(running_total("000001"))
+visualize(running_total("000001"), "000001")
 
 
