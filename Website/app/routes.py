@@ -7,7 +7,7 @@ from random import randint
 import sys
 from app.database.scrape import *
 from app.database.main import *
-from app.userstats import *
+from app.database.leaderboard import *
 
 # Home Page
 @app.route('/')
