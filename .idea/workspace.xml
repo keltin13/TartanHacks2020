@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2e71d32a-97b9-4202-b46b-93dc0216c70f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Website/app/database/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/Website/app/database/data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Website/app/database/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Website/app/database/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,6 +18,7 @@
   <component name="ProjectId" id="1XoyvZMjsP8UgctZx4qoWnsVEWT" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -69,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581726972116</updated>
-      <workItem from="1581726973885" duration="13362000" />
+      <workItem from="1581726973885" duration="16222000" />
     </task>
     <servers />
   </component>
