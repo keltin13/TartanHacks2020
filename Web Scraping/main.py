@@ -65,13 +65,14 @@ def websiteScraping(league):
             teamTwoS += point_spreads
             game_spread = (teamOneS, teamTwoS)
             #print(game_spread)
+            #print(game_spread)
             containers[(j//4)].append(game_spread)
             game_spread = ()
             teamOneS = ''
             teamTwoS = ''
             spread_count = 0
         j += 1
-    containers[len(containers)-1].append((-110, -110))
+    print(containers)
 
     # like the last two loops, this one scrapes data but of projected score differences
 
@@ -136,6 +137,7 @@ def timeConversion(container):
     time_str = ''
     time_int = 0
     game_times = []
+    time_since_epoch = []
     for i in range(1, len(container)):
         time_str = container[i][len(container[i]) - 1]
         time_str = time_str[:2] + time_str[3:6]
@@ -154,23 +156,21 @@ def timeConversion(container):
     minute = local_time.tm_min
     curr_time = (hour*100) + minute
     
-    if(curr_time < game_times[0]):
-        timeTilGame = game_times[0] - curr_time
-    elif(curr_time > game_times[0]):
-        timeTilGame = 24 - (curr_time - game_times[0])
+    for time_slot in game_times:
+        if(curr_time < time_slot):
+            timeTilGame = time_slot - curr_time
+        elif(curr_time > time_slot):
+            timeTilGame = 24 - (curr_time - time_slot)
     
-    hoursTilGame = timeTilGame//100
-    minutesTilGame = timeTilGame % 100
+        hoursTilGame = timeTilGame//100
+        minutesTilGame = timeTilGame % 100
 
     # this gives the current time of the next most recent game in terms of seconds 
     # since epoch.
-    finalTimeTilGame = seconds + (60 * minutesTilGame) + (3600 * hoursTilGame)
+        finalTimeTilGame = seconds + (60 * minutesTilGame) + (3600 * hoursTilGame)
+        time_since_epoch.append(finalTimeTilGame)
 
-    # we need to make it so that if the finalTimeTilGame is ever equal to or less than
+    # we need to make it so that if the finalTimeTilGame is never equal to or less than
     # the current time (meaning that the game ahs started), that we remove it from wherever
     # it is being stored (probably the json file), because betting on that game, will be frozen
-
-
-
-
-websiteScraping("hockey")
+    return time_since_epoch
