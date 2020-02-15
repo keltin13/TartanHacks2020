@@ -66,13 +66,12 @@ def websiteScraping(league):
             game_spread = (teamOneS, teamTwoS)
             #print(game_spread)
             #print(game_spread)
-            containers[(j//4)].append(game_spread)
+            containers[(j//4)%1].append(game_spread)
             game_spread = ()
             teamOneS = ''
             teamTwoS = ''
             spread_count = 0
         j += 1
-    print(containers)
 
     # like the last two loops, this one scrapes data but of projected score differences
 
@@ -130,8 +129,7 @@ def websiteScraping(league):
             time_stamp = char
         containers[ite].append(time_stamp)
         ite += 1
-    print(containers)
-    return containers
+    return containers      
 
 def timeConversion(container):
     time_str = ''
