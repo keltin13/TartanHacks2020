@@ -69,6 +69,12 @@ def intify(text):
     return float(text)
 
 
+def retrieve_database(filepath):
+    with open(filepath, 'r') as json_file:
+        data = json.load(json_file)
+        return data
+
+
 def update_users(user, filepath):
     new_user = copy.deepcopy(user)
     new_user.pop("user_id")
@@ -151,7 +157,5 @@ def new_user_bets(user_bet, filepath):
         json.dump(data, json_file, indent=4)
 
 
-def retrieve_database(filepath):
-    with open(filepath, 'r') as json_file:
-        data = json.load(json_file)
-        return data
+def get_bets_by_league(league, filepath):
+    return retrieve_database(filepath)["bets"][league]
