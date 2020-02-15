@@ -26,7 +26,8 @@
                 "team": "Clippers",
                 "value": 100,
                 "winnings": 100,
-                "net": 0
+                "net": 0,
+                "timestamp": 1581785537.545163
             },
             {
                 "bet_id": "001908",
@@ -50,8 +51,8 @@
                 "bet_id": "234798",
                 "team": "Duke",
                 "value": 50,
-                "winnings": 130.75,
-                "net": 80.75,
+                "winnings": 95.45,
+                "net": 45.45,
                 "timestamp": 0
             }
         ]
@@ -158,115 +159,15 @@
                 "winner": "None",
                 "timestamp": 1581781229.4453235
             },
-            "740901": {
-                "team-1": "Texas Tech",
-                "team-2": "Oklahoma State",
-                "line1": -3.0,
-                "line2": 3.0,
-                "odds1": -115.0,
-                "odds2": -105.0,
-                "winner": "None",
-                "timestamp": 1581781229.4453235
-            },
-            "135414": {
-                "team-1": "Bowling Green",
-                "team-2": "Ball State",
-                "line1": 5.0,
-                "line2": -5.0,
-                "odds1": -112.0,
-                "odds2": -108.0,
-                "winner": "None",
-                "timestamp": 1581781229.4453235
-            },
-            "450378": {
-                "team-1": "Ohio",
-                "team-2": "Kent State",
-                "line1": 7.0,
-                "line2": -7.0,
-                "odds1": -115.0,
-                "odds2": -105.0,
-                "winner": "None",
-                "timestamp": 1581781229.4453235
-            },
-            "748805": {
-                "team-1": "Cleveland State",
-                "team-2": "Detroit",
-                "line1": 5.5,
-                "line2": -5.5,
-                "odds1": -107.0,
-                "odds2": -113.0,
-                "winner": "None",
-                "timestamp": 1581781229.4453235
-            },
-            "675816": {
-                "team-1": "Mississippi State",
-                "team-2": "Arkansas",
-                "line1": 2.5,
-                "line2": -2.5,
-                "odds1": -110.0,
-                "odds2": -110.0,
-                "winner": "None",
-                "timestamp": 1581781229.4453235
-            },
-            "300601": {
-                "team-1": "East Tenn State",
-                "team-2": "VMI",
-                "line1": -12.5,
-                "line2": 12.5,
-                "odds1": -116.0,
-                "odds2": -104.0,
-                "winner": "None",
-                "timestamp": 1581781229.4453235
-            },
-            "832355": {
-                "team-1": "Samford",
-                "team-2": "The Citadel",
-                "line1": -1.0,
-                "line2": 1.0,
-                "odds1": -115.0,
-                "odds2": -105.0,
-                "winner": "None",
-                "timestamp": 1581781229.4453235
-            },
-            "934161": {
-                "team-1": "Fairleigh Dickinson",
-                "team-2": "Robert Morris",
-                "line1": 6.5,
-                "line2": -6.5,
-                "odds1": -117.0,
-                "odds2": -103.0,
-                "winner": "None",
-                "timestamp": 1581781229.4453235
-            },
-            "506225": {
-                "team-1": "Lehigh",
-                "team-2": "Army",
-                "line1": 4.5,
-                "line2": -4.5,
-                "odds1": -115.0,
-                "odds2": -105.0,
-                "winner": "None",
-                "timestamp": 1581781229.4453235
-            },
-            "410437": {
-                "team-1": "New Hampshire",
-                "team-2": "MD Baltimore Co",
-                "line1": 2.5,
-                "line2": -2.5,
-                "odds1": -110.0,
-                "odds2": -110.0,
-                "winner": "None",
-                "timestamp": 1581781229.4453235
-            },
             "079102": {
                 "team-1": "Wake Forest",
                 "team-2": "Miami Florida",
                 "line1": 3.5,
                 "line2": -3.5,
-                "odds1": -102.0,
-                "odds2": -118.0,
+                "odds1": 100.0,
+                "odds2": -120.0,
                 "winner": "None",
-                "timestamp": 1581781229.4453235
+                "timestamp": 1581795635.7471344
             },
             "980815": {
                 "team-1": "Coastal Carolina",
@@ -276,7 +177,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4453235
+                "timestamp": 1581795635.7471344
             },
             "811511": {
                 "team-1": "Old Dominion",
@@ -286,67 +187,67 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4453235
+                "timestamp": 1581795635.7471344
             },
             "116717": {
                 "team-1": "Bradley",
                 "team-2": "Southern Illinois",
                 "line1": -1.0,
                 "line2": 1.0,
-                "odds1": -115.0,
-                "odds2": -105.0,
+                "odds1": -113.0,
+                "odds2": -107.0,
                 "winner": "None",
-                "timestamp": 1581781229.4453235
+                "timestamp": 1581795635.7471344
             },
             "314940": {
                 "team-1": "Texas",
                 "team-2": "Iowa State",
                 "line1": 2.5,
                 "line2": -2.5,
-                "odds1": -109.0,
-                "odds2": -111.0,
+                "odds1": -102.0,
+                "odds2": -118.0,
                 "winner": "None",
-                "timestamp": 1581781229.4453235
+                "timestamp": 1581795635.7471344
             },
             "374247": {
                 "team-1": "Mississippi",
                 "team-2": "Kentucky",
                 "line1": 9.5,
                 "line2": -9.5,
-                "odds1": -110.0,
-                "odds2": -110.0,
+                "odds1": -108.0,
+                "odds2": -112.0,
                 "winner": "None",
-                "timestamp": 1581781229.4453235
+                "timestamp": 1581795635.7471344
             },
             "709405": {
                 "team-1": "San Jose State",
                 "team-2": "Air Force",
                 "line1": 9.0,
                 "line2": -9.0,
-                "odds1": -115.0,
-                "odds2": -105.0,
+                "odds1": -110.0,
+                "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4453235
+                "timestamp": 1581795635.7471344
             },
             "743548": {
                 "team-1": "UMass Lowell",
                 "team-2": "Hartford",
-                "line1": 3.5,
-                "line2": -3.5,
-                "odds1": -118.0,
-                "odds2": -102.0,
+                "line1": 3.0,
+                "line2": -3.0,
+                "odds1": -115.0,
+                "odds2": -105.0,
                 "winner": "None",
-                "timestamp": 1581781229.4453235
+                "timestamp": 1581795635.7471344
             },
             "727193": {
                 "team-1": "American",
                 "team-2": "Bucknell",
                 "line1": 2.0,
                 "line2": -2.0,
-                "odds1": -112.0,
-                "odds2": -108.0,
+                "odds1": -113.0,
+                "odds2": -107.0,
                 "winner": "None",
-                "timestamp": 1581781229.4453235
+                "timestamp": 1581795635.7471344
             },
             "858496": {
                 "team-1": "Florida A&M",
@@ -356,17 +257,17 @@
                 "odds1": -113.0,
                 "odds2": -107.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581795635.7471344
             },
             "714078": {
                 "team-1": "Binghamton",
                 "team-2": "Vermont",
                 "line1": 22.0,
                 "line2": -22.0,
-                "odds1": -118.0,
-                "odds2": -102.0,
+                "odds1": -113.0,
+                "odds2": -107.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581795635.7471344
             },
             "694798": {
                 "team-1": "Lafayette",
@@ -376,7 +277,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581795935.7471344
             },
             "638769": {
                 "team-1": "Wisconsin",
@@ -386,7 +287,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581794135.7471344
             },
             "910679": {
                 "team-1": "Western Michigan",
@@ -396,17 +297,17 @@
                 "odds1": -108.0,
                 "odds2": -112.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581795035.7471344
             },
             "132651": {
                 "team-1": "Georgetown",
                 "team-2": "Butler",
-                "line1": 9.0,
-                "line2": -9.0,
+                "line1": 8.5,
+                "line2": -8.5,
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581795035.7471344
             },
             "404525": {
                 "team-1": "La Salle",
@@ -416,27 +317,27 @@
                 "odds1": -105.0,
                 "odds2": -115.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581795035.7471344
             },
             "968481": {
                 "team-1": "Charlotte U",
                 "team-2": "Rice",
-                "line1": 1.5,
-                "line2": -1.5,
-                "odds1": -110.0,
-                "odds2": -110.0,
+                "line1": 0,
+                "line2": 0,
+                "odds1": -105.0,
+                "odds2": -115.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581799235.7471344
             },
             "462893": {
                 "team-1": "UAB",
                 "team-2": "Middle Tenn St",
                 "line1": -2.0,
                 "line2": 2.0,
-                "odds1": -118.0,
-                "odds2": -102.0,
+                "odds1": -111.0,
+                "odds2": -109.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581799235.7471344
             },
             "269690": {
                 "team-1": "Florida Atlantic",
@@ -446,27 +347,27 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581799235.7471344
             },
             "857095": {
                 "team-1": "Youngstown State",
                 "team-2": "Oakland",
                 "line1": 3.5,
                 "line2": -3.5,
-                "odds1": -107.0,
-                "odds2": -113.0,
+                "odds1": -105.0,
+                "odds2": -115.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581799235.7471344
             },
             "456684": {
                 "team-1": "Florida Intl",
                 "team-2": "Southern Miss",
-                "line1": -2.0,
-                "line2": 2.0,
-                "odds1": -115.0,
-                "odds2": -105.0,
+                "line1": -2.5,
+                "line2": 2.5,
+                "odds1": -112.0,
+                "odds2": -108.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581799235.7471344
             },
             "631053": {
                 "team-1": "Arkansas Little Rock",
@@ -476,17 +377,17 @@
                 "odds1": -115.0,
                 "odds2": -105.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581799235.7471344
             },
             "889105": {
                 "team-1": "Arkansas State",
                 "team-2": "Texas State",
                 "line1": 8.5,
                 "line2": -8.5,
-                "odds1": -110.0,
-                "odds2": -110.0,
+                "odds1": -116.0,
+                "odds2": -104.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581799235.7471344
             },
             "650598": {
                 "team-1": "Western Kentucky",
@@ -496,7 +397,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581799235.7471344
             },
             "714465": {
                 "team-1": "Houston Baptist",
@@ -506,7 +407,7 @@
                 "odds1": -118.0,
                 "odds2": -102.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581799235.7471344
             },
             "608797": {
                 "team-1": "Northern Illinois",
@@ -516,7 +417,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581798635.7471344
             },
             "614040": {
                 "team-1": "Georgia",
@@ -526,17 +427,17 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581798635.7471344
             },
             "598976": {
                 "team-1": "Bryant",
                 "team-2": "Central Connecticut",
-                "line1": -9.5,
-                "line2": 9.5,
-                "odds1": -110.0,
-                "odds2": -110.0,
+                "line1": -9.0,
+                "line2": 9.0,
+                "odds1": -115.0,
+                "odds2": -105.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581798635.7471344
             },
             "217438": {
                 "team-1": "UL - Monroe",
@@ -546,27 +447,27 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581802835.7471344
             },
             "425546": {
                 "team-1": "LSU",
                 "team-2": "Alabama",
                 "line1": 2.0,
                 "line2": -2.0,
-                "odds1": -102.0,
-                "odds2": -118.0,
+                "odds1": -105.0,
+                "odds2": -115.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581802835.7471344
             },
             "820783": {
                 "team-1": "Appalachian State",
                 "team-2": "Georgia Southern",
                 "line1": 5.0,
                 "line2": -5.0,
-                "odds1": -105.0,
-                "odds2": -115.0,
+                "odds1": -110.0,
+                "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581802835.7471344
             },
             "786830": {
                 "team-1": "Marshall",
@@ -576,7 +477,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581802835.7471344
             },
             "994858": {
                 "team-1": "NC Wilmington",
@@ -586,17 +487,17 @@
                 "odds1": -115.0,
                 "odds2": -105.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581802835.7471344
             },
             "308571": {
                 "team-1": "Delaware",
                 "team-2": "William & Mary",
                 "line1": 3.0,
                 "line2": -3.0,
-                "odds1": -110.0,
-                "odds2": -110.0,
+                "odds1": -115.0,
+                "odds2": -105.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581802835.7471344
             },
             "266673": {
                 "team-1": "Drexel",
@@ -606,7 +507,7 @@
                 "odds1": -108.0,
                 "odds2": -112.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581802835.7471344
             },
             "518236": {
                 "team-1": "Colorado State",
@@ -616,17 +517,17 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581802835.7471344
             },
             "760449": {
                 "team-1": "West Virginia",
                 "team-2": "Baylor",
                 "line1": 5.5,
                 "line2": -5.5,
-                "odds1": -112.0,
-                "odds2": -108.0,
+                "odds1": -114.0,
+                "odds2": -106.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581802835.7471344
             },
             "187445": {
                 "team-1": "Louisville",
@@ -636,57 +537,57 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4463198
+                "timestamp": 1581802835.7471344
             },
             "715296": {
                 "team-1": "Notre Dame",
                 "team-2": "Duke",
                 "line1": 12.5,
                 "line2": -12.5,
-                "odds1": -110.0,
-                "odds2": -110.0,
+                "odds1": -112.0,
+                "odds2": -108.0,
                 "winner": "None",
-                "timestamp": 1581781229.4473512
+                "timestamp": 1581802835.7471344
             },
             "774210": {
                 "team-1": "Va Commonwealth",
                 "team-2": "Richmond",
                 "line1": 1.5,
                 "line2": -1.5,
-                "odds1": -105.0,
-                "odds2": -115.0,
+                "odds1": -104.0,
+                "odds2": -116.0,
                 "winner": "None",
-                "timestamp": 1581781229.4473512
+                "timestamp": 1581802835.7471344
             },
             "389875": {
                 "team-1": "Boston U",
                 "team-2": "Navy",
                 "line1": -2.0,
                 "line2": 2.0,
-                "odds1": -115.0,
-                "odds2": -105.0,
+                "odds1": -105.0,
+                "odds2": -115.0,
                 "winner": "None",
-                "timestamp": 1581781229.4473512
+                "timestamp": 1581802835.7471344
             },
             "263414": {
                 "team-1": "McNeese State",
                 "team-2": "Northwestern State",
-                "line1": 0,
-                "line2": 0,
+                "line1": -1.0,
+                "line2": 1.0,
                 "odds1": -115.0,
                 "odds2": -105.0,
                 "winner": "None",
-                "timestamp": 1581781229.4473512
+                "timestamp": 1581802835.7471344
             },
             "051384": {
                 "team-1": "Kennesaw St",
                 "team-2": "Stetson",
-                "line1": 12.0,
-                "line2": -12.0,
-                "odds1": -112.0,
-                "odds2": -108.0,
+                "line1": 12.5,
+                "line2": -12.5,
+                "odds1": -110.0,
+                "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4473512
+                "timestamp": 1581802835.7471344
             },
             "155566": {
                 "team-1": "Coppin State",
@@ -696,17 +597,17 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4473512
+                "timestamp": 1581802835.7471344
             },
             "817940": {
                 "team-1": "Bethune Cookman",
                 "team-2": "MD Eastern Shore",
-                "line1": -7.0,
-                "line2": 7.0,
+                "line1": -6.5,
+                "line2": 6.5,
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4473512
+                "timestamp": 1581802835.7471344
             },
             "052595": {
                 "team-1": "Winthrop",
@@ -716,17 +617,17 @@
                 "odds1": -105.0,
                 "odds2": -115.0,
                 "winner": "None",
-                "timestamp": 1581781229.4473512
+                "timestamp": 1581802835.7471344
             },
             "526479": {
                 "team-1": "St. Francis PA",
                 "team-2": "Mt. St. Mary's",
-                "line1": -1.5,
-                "line2": 1.5,
-                "odds1": -115.0,
-                "odds2": -105.0,
+                "line1": -2.0,
+                "line2": 2.0,
+                "odds1": -107.0,
+                "odds2": -113.0,
                 "winner": "None",
-                "timestamp": 1581781229.4473512
+                "timestamp": 1581802835.7471344
             },
             "672504": {
                 "team-1": "SE Louisiana",
@@ -736,7 +637,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4473512
+                "timestamp": 1581802835.7471344
             },
             "505672": {
                 "team-1": "Wagner",
@@ -746,7 +647,7 @@
                 "odds1": -113.0,
                 "odds2": -107.0,
                 "winner": "None",
-                "timestamp": 1581781229.4473512
+                "timestamp": 1581802835.7471344
             },
             "414335": {
                 "team-1": "Chattanooga",
@@ -756,27 +657,27 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4473512
+                "timestamp": 1581802235.7471344
             },
             "282580": {
                 "team-1": "NC Greensboro",
                 "team-2": "Mercer",
-                "line1": -6.5,
-                "line2": 6.5,
-                "odds1": -112.0,
-                "odds2": -108.0,
+                "line1": -7.0,
+                "line2": 7.0,
+                "odds1": -115.0,
+                "odds2": -105.0,
                 "winner": "None",
-                "timestamp": 1581781229.4473512
+                "timestamp": 1581802235.7471344
             },
             "445300": {
                 "team-1": "Illinois",
                 "team-2": "Rutgers",
-                "line1": 4.5,
-                "line2": -4.5,
-                "odds1": -115.0,
-                "odds2": -105.0,
+                "line1": 4.0,
+                "line2": -4.0,
+                "odds1": -110.0,
+                "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4473512
+                "timestamp": 1581802235.7471344
             },
             "864465": {
                 "team-1": "George Washington",
@@ -786,7 +687,7 @@
                 "odds1": -115.0,
                 "odds2": -105.0,
                 "winner": "None",
-                "timestamp": 1581781229.4473512
+                "timestamp": 1581802235.7471344
             },
             "398550": {
                 "team-1": "Sacred Heart",
@@ -796,7 +697,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4473512
+                "timestamp": 1581802235.7471344
             },
             "975268": {
                 "team-1": "Abilene Christian",
@@ -806,7 +707,7 @@
                 "odds1": -115.0,
                 "odds2": -105.0,
                 "winner": "None",
-                "timestamp": 1581781229.4473512
+                "timestamp": 1581802235.7471344
             },
             "489442": {
                 "team-1": "Central Arkansas",
@@ -816,17 +717,17 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4473512
+                "timestamp": 1581802235.7471344
             },
             "752733": {
                 "team-1": "Charleston Sou",
                 "team-2": "NC Asheville",
-                "line1": 4.0,
-                "line2": -4.0,
-                "odds1": -110.0,
-                "odds2": -110.0,
+                "line1": 3.5,
+                "line2": -3.5,
+                "odds1": -105.0,
+                "odds2": -115.0,
                 "winner": "None",
-                "timestamp": 1581781229.4473512
+                "timestamp": 1581802235.7471344
             },
             "460645": {
                 "team-1": "Radford",
@@ -836,7 +737,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4473512
+                "timestamp": 1581802235.7471344
             },
             "218390": {
                 "team-1": "Eastern Kentucky",
@@ -846,7 +747,7 @@
                 "odds1": -112.0,
                 "odds2": -108.0,
                 "winner": "None",
-                "timestamp": 1581781229.4473512
+                "timestamp": 1581806435.7471344
             },
             "919125": {
                 "team-1": "Loyola Marymount",
@@ -856,7 +757,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4473512
+                "timestamp": 1581806435.7471344
             },
             "339859": {
                 "team-1": "SIU Edwardsville",
@@ -866,7 +767,7 @@
                 "odds1": -105.0,
                 "odds2": -115.0,
                 "winner": "None",
-                "timestamp": 1581781229.4483519
+                "timestamp": 1581806435.7471344
             },
             "000520": {
                 "team-1": "Morehead State",
@@ -876,17 +777,17 @@
                 "odds1": -105.0,
                 "odds2": -115.0,
                 "winner": "None",
-                "timestamp": 1581781229.4483519
+                "timestamp": 1581806435.7471344
             },
             "207442": {
                 "team-1": "Eastern Illinois",
                 "team-2": "Tennessee Martin",
-                "line1": -2.5,
-                "line2": 2.5,
-                "odds1": -115.0,
-                "odds2": -105.0,
+                "line1": -3.0,
+                "line2": 3.0,
+                "odds1": -112.0,
+                "odds2": -108.0,
                 "winner": "None",
-                "timestamp": 1581781229.4483519
+                "timestamp": 1581806435.7471344
             },
             "460898": {
                 "team-1": "Kansas State",
@@ -896,17 +797,17 @@
                 "odds1": -116.0,
                 "odds2": -104.0,
                 "winner": "None",
-                "timestamp": 1581781229.4483519
+                "timestamp": 1581806435.7471344
             },
             "686363": {
                 "team-1": "Fla Gulf Coast",
                 "team-2": "Lipscomb",
-                "line1": 5.0,
-                "line2": -5.0,
-                "odds1": -105.0,
-                "odds2": -115.0,
+                "line1": 6.0,
+                "line2": -6.0,
+                "odds1": -118.0,
+                "odds2": -102.0,
                 "winner": "None",
-                "timestamp": 1581781229.4483519
+                "timestamp": 1581806435.7471344
             },
             "168466": {
                 "team-1": "North Alabama",
@@ -916,7 +817,7 @@
                 "odds1": -112.0,
                 "odds2": -108.0,
                 "winner": "None",
-                "timestamp": 1581781229.4483519
+                "timestamp": 1581806435.7471344
             },
             "047055": {
                 "team-1": "Utah Valley",
@@ -926,7 +827,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4483519
+                "timestamp": 1581810035.7471344
             },
             "834893": {
                 "team-1": "Pittsburgh",
@@ -936,47 +837,47 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4483519
+                "timestamp": 1581810035.7471344
             },
             "173706": {
                 "team-1": "Southern Utah",
                 "team-2": "Northern Arizona",
                 "line1": -2.5,
                 "line2": 2.5,
-                "odds1": -115.0,
-                "odds2": -105.0,
+                "odds1": -110.0,
+                "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4483519
+                "timestamp": 1581810035.7471344
             },
             "811820": {
                 "team-1": "Maryland",
                 "team-2": "Michigan State",
                 "line1": 6.5,
                 "line2": -6.5,
-                "odds1": -110.0,
-                "odds2": -110.0,
+                "odds1": -115.0,
+                "odds2": -105.0,
                 "winner": "None",
-                "timestamp": 1581781229.4483519
+                "timestamp": 1581810035.7471344
             },
             "999953": {
                 "team-1": "Yale",
                 "team-2": "Pennsylvania",
                 "line1": -5.5,
                 "line2": 5.5,
-                "odds1": -110.0,
-                "odds2": -110.0,
+                "odds1": -108.0,
+                "odds2": -112.0,
                 "winner": "None",
-                "timestamp": 1581781229.4483519
+                "timestamp": 1581810035.7471344
             },
             "717476": {
                 "team-1": "Brown",
                 "team-2": "Princeton",
                 "line1": 4.0,
                 "line2": -4.0,
-                "odds1": -110.0,
-                "odds2": -110.0,
+                "odds1": -105.0,
+                "odds2": -115.0,
                 "winner": "None",
-                "timestamp": 1581781229.4483519
+                "timestamp": 1581810035.7471344
             },
             "499911": {
                 "team-1": "Jacksonville State",
@@ -986,7 +887,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4483519
+                "timestamp": 1581810035.7471344
             },
             "111588": {
                 "team-1": "UNLV",
@@ -996,17 +897,17 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4483519
+                "timestamp": 1581810035.7471344
             },
             "076418": {
                 "team-1": "Auburn",
                 "team-2": "Missouri",
                 "line1": -4.5,
                 "line2": 4.5,
-                "odds1": -110.0,
-                "odds2": -110.0,
+                "odds1": -108.0,
+                "odds2": -112.0,
                 "winner": "None",
-                "timestamp": 1581781229.4483519
+                "timestamp": 1581810035.7471344
             },
             "242522": {
                 "team-1": "Houston",
@@ -1016,17 +917,17 @@
                 "odds1": -115.0,
                 "odds2": -105.0,
                 "winner": "None",
-                "timestamp": 1581781229.4483519
+                "timestamp": 1581810035.7471344
             },
             "508507": {
                 "team-1": "Tennessee",
                 "team-2": "South Carolina",
                 "line1": 3.5,
                 "line2": -3.5,
-                "odds1": -110.0,
-                "odds2": -110.0,
+                "odds1": -113.0,
+                "odds2": -107.0,
                 "winner": "None",
-                "timestamp": 1581781229.4483519
+                "timestamp": 1581810035.7471344
             },
             "858389": {
                 "team-1": "Alabama A&M",
@@ -1036,7 +937,7 @@
                 "odds1": -118.0,
                 "odds2": -102.0,
                 "winner": "None",
-                "timestamp": 1581781229.4483519
+                "timestamp": 1581810035.7471344
             },
             "187763": {
                 "team-1": "Hampton",
@@ -1046,7 +947,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4493494
+                "timestamp": 1581810035.7471344
             },
             "290902": {
                 "team-1": "Grambling",
@@ -1056,7 +957,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4493494
+                "timestamp": 1581809435.7471344
             },
             "620280": {
                 "team-1": "Morgan State",
@@ -1066,7 +967,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4493494
+                "timestamp": 1581809435.7471344
             },
             "068941": {
                 "team-1": "Mississippi Valley State",
@@ -1076,17 +977,17 @@
                 "odds1": -105.0,
                 "odds2": -115.0,
                 "winner": "None",
-                "timestamp": 1581781229.4493494
+                "timestamp": 1581809435.7471344
             },
             "076225": {
                 "team-1": "Ark Pine Bluff",
                 "team-2": "Southern",
-                "line1": 10.5,
-                "line2": -10.5,
-                "odds1": -112.0,
-                "odds2": -108.0,
+                "line1": 9.5,
+                "line2": -9.5,
+                "odds1": -110.0,
+                "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4495778
+                "timestamp": 1581809435.7471344
             },
             "308907": {
                 "team-1": "Columbia",
@@ -1096,7 +997,7 @@
                 "odds1": -108.0,
                 "odds2": -112.0,
                 "winner": "None",
-                "timestamp": 1581781229.4495778
+                "timestamp": 1581813635.7471344
             },
             "519117": {
                 "team-1": "Western Carolina",
@@ -1106,7 +1007,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4495778
+                "timestamp": 1581813635.7471344
             },
             "491416": {
                 "team-1": "Valparaiso",
@@ -1116,7 +1017,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4495778
+                "timestamp": 1581813635.7471344
             },
             "622460": {
                 "team-1": "Cornell",
@@ -1126,7 +1027,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4495778
+                "timestamp": 1581813635.7471344
             },
             "597968": {
                 "team-1": "UL - Lafayette",
@@ -1136,7 +1037,7 @@
                 "odds1": -115.0,
                 "odds2": -105.0,
                 "winner": "None",
-                "timestamp": 1581781229.4495778
+                "timestamp": 1581813635.7471344
             },
             "921891": {
                 "team-1": "Wisc Green Bay",
@@ -1146,7 +1047,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4495778
+                "timestamp": 1581813635.7471344
             },
             "880315": {
                 "team-1": "Cal Riverside",
@@ -1156,7 +1057,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4495778
+                "timestamp": 1581813635.7471344
             },
             "000353": {
                 "team-1": "Incarnate Word",
@@ -1166,37 +1067,37 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4495778
+                "timestamp": 1581813635.7471344
             },
             "681311": {
                 "team-1": "USC Upstate",
                 "team-2": "High Point",
-                "line1": -1.0,
-                "line2": 1.0,
-                "odds1": -112.0,
-                "odds2": -108.0,
+                "line1": -1.5,
+                "line2": 1.5,
+                "odds1": -118.0,
+                "odds2": -102.0,
                 "winner": "None",
-                "timestamp": 1581781229.4495778
+                "timestamp": 1581813635.7471344
             },
             "243796": {
                 "team-1": "NJIT",
                 "team-2": "Liberty",
-                "line1": 16.5,
-                "line2": -16.5,
-                "odds1": -112.0,
-                "odds2": -108.0,
+                "line1": 16.0,
+                "line2": -16.0,
+                "odds1": -110.0,
+                "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4495778
+                "timestamp": 1581813635.7471344
             },
             "597684": {
                 "team-1": "Depaul",
                 "team-2": "Creighton",
-                "line1": 9.0,
-                "line2": -9.0,
-                "odds1": -115.0,
-                "odds2": -105.0,
+                "line1": 8.0,
+                "line2": -8.0,
+                "odds1": -112.0,
+                "odds2": -108.0,
                 "winner": "None",
-                "timestamp": 1581781229.4495778
+                "timestamp": 1581813035.7471344
             },
             "366179": {
                 "team-1": "Virginia",
@@ -1206,17 +1107,17 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4495778
+                "timestamp": 1581817235.7471344
             },
             "442827": {
                 "team-1": "Weber State",
                 "team-2": "Montana State",
                 "line1": 6.0,
                 "line2": -6.0,
-                "odds1": -112.0,
-                "odds2": -108.0,
+                "odds1": -114.0,
+                "odds2": -106.0,
                 "winner": "None",
-                "timestamp": 1581781229.4503515
+                "timestamp": 1581817235.7471344
             },
             "726288": {
                 "team-1": "CS Northridge",
@@ -1226,17 +1127,17 @@
                 "odds1": -108.0,
                 "odds2": -112.0,
                 "winner": "None",
-                "timestamp": 1581781229.4503515
+                "timestamp": 1581817235.7471344
             },
             "447833": {
                 "team-1": "Seton Hall",
                 "team-2": "Providence",
                 "line1": -1.5,
                 "line2": 1.5,
-                "odds1": -115.0,
-                "odds2": -105.0,
+                "odds1": -110.0,
+                "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4503515
+                "timestamp": 1581817235.7471344
             },
             "258755": {
                 "team-1": "Towson",
@@ -1246,7 +1147,7 @@
                 "odds1": -115.0,
                 "odds2": -105.0,
                 "winner": "None",
-                "timestamp": 1581781229.4503515
+                "timestamp": 1581817235.7471344
             },
             "571981": {
                 "team-1": "Northern Iowa",
@@ -1256,7 +1157,7 @@
                 "odds1": -105.0,
                 "odds2": -115.0,
                 "winner": "None",
-                "timestamp": 1581781229.4503515
+                "timestamp": 1581817235.7471344
             },
             "947728": {
                 "team-1": "North Dakota",
@@ -1266,7 +1167,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4503515
+                "timestamp": 1581817235.7471344
             },
             "590191": {
                 "team-1": "South Dakota",
@@ -1276,7 +1177,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4503515
+                "timestamp": 1581817235.7471344
             },
             "121074": {
                 "team-1": "Washington State",
@@ -1286,17 +1187,17 @@
                 "odds1": -115.0,
                 "odds2": -105.0,
                 "winner": "None",
-                "timestamp": 1581781229.4503515
+                "timestamp": 1581817235.7471344
             },
             "069355": {
                 "team-1": "Pacific",
                 "team-2": "Saint Marys CA",
                 "line1": 10.5,
                 "line2": -10.5,
-                "odds1": -115.0,
-                "odds2": -105.0,
+                "odds1": -118.0,
+                "odds2": -102.0,
                 "winner": "None",
-                "timestamp": 1581781229.4503515
+                "timestamp": 1581817235.7471344
             },
             "553168": {
                 "team-1": "Chicago State",
@@ -1306,7 +1207,7 @@
                 "odds1": -108.0,
                 "odds2": -112.0,
                 "winner": "None",
-                "timestamp": 1581781229.4503515
+                "timestamp": 1581817235.7471344
             },
             "040290": {
                 "team-1": "Seattle U",
@@ -1316,7 +1217,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4503515
+                "timestamp": 1581817235.7471344
             },
             "800061": {
                 "team-1": "Vanderbilt",
@@ -1326,17 +1227,17 @@
                 "odds1": -116.0,
                 "odds2": -104.0,
                 "winner": "None",
-                "timestamp": 1581781229.4503515
+                "timestamp": 1581817235.7471344
             },
             "434133": {
                 "team-1": "Tennessee Tech",
                 "team-2": "Tennessee State",
-                "line1": 9.5,
-                "line2": -9.5,
-                "odds1": -115.0,
-                "odds2": -105.0,
+                "line1": 9.0,
+                "line2": -9.0,
+                "odds1": -110.0,
+                "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4503515
+                "timestamp": 1581816635.7471344
             },
             "132167": {
                 "team-1": "Jackson State",
@@ -1346,7 +1247,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4503515
+                "timestamp": 1581816635.7471344
             },
             "574766": {
                 "team-1": "Cal Poly SLO",
@@ -1356,7 +1257,7 @@
                 "odds1": -113.0,
                 "odds2": -107.0,
                 "winner": "None",
-                "timestamp": 1581781229.4503515
+                "timestamp": 1581820835.7471344
             },
             "352036": {
                 "team-1": "Idaho State",
@@ -1366,7 +1267,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4513054
+                "timestamp": 1581820835.7471344
             },
             "257243": {
                 "team-1": "Colorado",
@@ -1376,17 +1277,17 @@
                 "odds1": -112.0,
                 "odds2": -108.0,
                 "winner": "None",
-                "timestamp": 1581781229.4513054
+                "timestamp": 1581824435.7471344
             },
             "670559": {
                 "team-1": "Utah State",
                 "team-2": "Fresno State",
-                "line1": -4.5,
-                "line2": 4.5,
-                "odds1": -113.0,
-                "odds2": -107.0,
+                "line1": -5.0,
+                "line2": 5.0,
+                "odds1": -108.0,
+                "odds2": -112.0,
                 "winner": "None",
-                "timestamp": 1581781229.4513054
+                "timestamp": 1581824435.7471344
             },
             "869886": {
                 "team-1": "UMKC",
@@ -1396,7 +1297,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4513054
+                "timestamp": 1581824435.7471344
             },
             "071425": {
                 "team-1": "BYU",
@@ -1406,7 +1307,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4513054
+                "timestamp": 1581824435.7471344
             },
             "670799": {
                 "team-1": "Gonzaga",
@@ -1416,17 +1317,17 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4513054
+                "timestamp": 1581824435.7471344
             },
             "562927": {
                 "team-1": "Washington",
                 "team-2": "UCLA",
                 "line1": 3.0,
                 "line2": -3.0,
-                "odds1": -104.0,
-                "odds2": -116.0,
+                "odds1": -105.0,
+                "odds2": -115.0,
                 "winner": "None",
-                "timestamp": 1581781229.4513054
+                "timestamp": 1581824435.7471344
             },
             "858742": {
                 "team-1": "Eastern Washington",
@@ -1436,7 +1337,7 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4513054
+                "timestamp": 1581824735.7471344
             },
             "953621": {
                 "team-1": "No. Colorado",
@@ -1446,17 +1347,27 @@
                 "odds1": -110.0,
                 "odds2": -110.0,
                 "winner": "None",
-                "timestamp": 1581781229.4513054
+                "timestamp": 1581824735.7471344
             },
             "990960": {
                 "team-1": "Arizona",
                 "team-2": "Stanford",
                 "line1": -4.5,
                 "line2": 4.5,
-                "odds1": -108.0,
-                "odds2": -112.0,
+                "odds1": -106.0,
+                "odds2": -114.0,
                 "winner": "None",
-                "timestamp": 1581781229.4513054
+                "timestamp": 1581823835.7471344
+            },
+            "063788": {
+                "team-1": "Cal Irvine",
+                "team-2": "Hawaii",
+                "line1": -2.5,
+                "line2": 2.5,
+                "odds1": -115.0,
+                "odds2": -105.0,
+                "winner": "None",
+                "timestamp": 1581829175.7471344
             }
         },
         "hockey": {}

@@ -54,7 +54,7 @@ database (dict)
 
 import json, time, copy
 import random
-#from scrape import *
+from scrape import *
 
 
 def intify(text):
@@ -78,7 +78,7 @@ def retrieve_database(filepath):
 def update_users(user, filepath):
     new_user = copy.deepcopy(user)
     new_user.pop("user_id")
-    new_user["total-history"] = []
+    new_user["total-history"] = [user["total"]]
     with open(filepath, 'r') as json_file:
         data = json.load(json_file)
         if user["user_id"] in data["users"]:
@@ -114,8 +114,10 @@ def get_user_bets(user_id, filepath):
 
 def update_bets(league, filepath):
     raw = websiteScraping(league)
+    times = timeConversion(raw)
     with open(filepath, 'r') as json_file:
         data = json.load(json_file)
+        i = 0
         for point in raw:
             bet = {}
             if type(point) == list:
@@ -135,7 +137,8 @@ def update_bets(league, filepath):
                 bet["odds1"] = intify(point[2][0])
                 bet["odds2"] = intify(point[2][1])
                 bet["winner"] = "None"
-                bet["timestamp"] = time.time()
+                bet["timestamp"] = times[i]
+                i += 1
                 data["bets"][league][bet_id] = bet
     with open(filepath, 'w') as json_file:
         json.dump(data, json_file, indent=4)
@@ -153,6 +156,7 @@ def new_user_bets(user_bet, filepath):
             data["user-bets"][user_bet["user_id"]].append(bet)
         else:
             data["user-bets"][user_bet["user_id"]] = [bet]
+        data["users"][user_bet["user_id"]]["total"] -= bet["value"]
     with open(filepath, 'w') as json_file:
         json.dump(data, json_file, indent=4)
 
@@ -185,6 +189,7 @@ def conclude_bet(bet_id, filepath):
                         bet["winnings"] = 0
                     bet["net"] = round(bet["net"], 2)
                     bet["winnings"] = round(bet["winnings"], 2)
+                    data["users"][user]["total"] += bet["winnings"]
     with open(filepath, 'w') as json_file:
         json.dump(data, json_file, indent=4)
 
