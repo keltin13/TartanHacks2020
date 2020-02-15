@@ -25,8 +25,8 @@
                 "bet_id": "000001",
                 "team": "Clippers",
                 "value": 100,
-                "winnings": 191.1,
-                "net": 91.1
+                "winnings": 100,
+                "net": 0
             },
             {
                 "bet_id": "001908",
@@ -52,7 +52,7 @@
                 "value": 50,
                 "winnings": 130.75,
                 "net": 80.75,
-                "timestamp" : 0
+                "timestamp": 0
             }
         ]
     },
