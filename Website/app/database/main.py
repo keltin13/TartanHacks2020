@@ -6,7 +6,8 @@ update_users(user)
             len(user) == 3 &&
             type(user["user_id"]) == string &&
             type(user["username"]) == str &&
-            type(user["total"]) == float @*/
+            type(user["total"]) == float
+            type(user["password_hash"]) == str @*/
 //@ensures user in data.json
 
 new_user_bets(user_bet)
@@ -52,7 +53,8 @@ database (dict)
 """
 
 import json, time, copy
-
+import random
+from scrape import *
 
 def update_users(user, filepath):
     new_user = copy.deepcopy(user)
@@ -66,26 +68,47 @@ def update_users(user, filepath):
     with open(filepath, 'w') as json_file:
         json.dump(data, json_file, indent=4)
 
-# def update_bets():
-#     new_data = scrape_update()
-# '''
-# retrieve bets -- update bet data and if winner determined,
-# calculate winnings and add to user total and total-history
-# '''
-
-def update_bets(bet, filepath):
-    new_bet = copy.deepcopy(bet)
-    new_bet.pop("bet_id")
+def get_user_by_id(user_id, filepath):
     with open(filepath, 'r') as json_file:
         data = json.load(json_file)
-        data["bets"][bet["bet_id"]] = new_bet
-    with open(filepath, 'w') as json_file:
-        json.dump(data, json_file, indent=4)
+        if user_id in data["users"]:
+            return data["users"][user_id]
+
+
+def get_user_by_name(username, filepath):
+    with open(filepath, 'r') as json_file:
+        data = json.load(json_file)
+        for user_id in data["users"]:
+            if data["users"][user_id]["username"] == username:
+                return data["users"][user_id]
+
+
+def get_user_bets(user_id, filepath):
+    with open(filepath, 'r') as json_file:
+        data = json.load(json_file)
+        if user_id in data["bets"]:
+            return data["bets"][user_id]
+
+
+def update_bets(league, filepath):
+    raw = websiteScraping(league)
+    with open(filepath, 'r') as json_file:
+        data = json.load(json_file)
+        bet_id = str(format(random.randint(0, 999999), '05d'))
+        while bet_id in data["bets"]:
+            bet_id = str(format(random.randint(0, 999999), '05d'))
+        for point in raw:
+            bet = {}
+            if type(point) == list:
+                bet["team1"] = point[0]
+                bet["team2"] = point[1]
 
 def new_user_bets(user_bet, filepath):
     bet = copy.deepcopy(user_bet)
     bet.pop("user_id")
     bet["timestamp"] = time.time()
+    bet["winnings"] = user_bet["value"]
+    bet["net"] = 0
     with open(filepath, 'r') as json_file:
         data = json.load(json_file)
         if user_bet["user_id"] in data["user-bets"]:
