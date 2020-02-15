@@ -26,7 +26,8 @@
                 "team": "Clippers",
                 "value": 100,
                 "winnings": 191.1,
-                "net": 91.1
+                "net": 91.1,
+                "timestamp" : 0
             }
         ],
         "508234": [
@@ -35,7 +36,8 @@
                 "team": "Duke",
                 "value": 50,
                 "winnings": 130.75,
-                "net": 80.75
+                "net": 80.75,
+                "timestamp" : 0
             }
         ]
     },
