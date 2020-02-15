@@ -13,8 +13,12 @@ class PlaceBetForm(FlaskForm):
     bet_id = HiddenField('Bet ID')
     team1 = HiddenField('Team 1')
     team2 = HiddenField('Team 2')
+    line1 = StringField('Line 1')
+    line2 = StringField('Line 2')
+    odds1 = StringField('Odds 1')
+    odds2 = StringField('Odds 1')
     bet = IntegerField('Bet Amount', validators=[DataRequired()])
-    team = SelectField('Team, "Left" or "Right"', choices = [('left', 'Left'), ('right', 'Right')], validators=[DataRequired()])
+    team = SelectField('Team', validators=[DataRequired()])#, choices = [('left', 'Left'), ('right', 'Right')], validators=[DataRequired()])
     placeBet = SubmitField('Place Bet')
 
 class RegistrationForm(FlaskForm):

@@ -2,16 +2,19 @@
 {% import 'bootstrap/wtf.html' as wtf %}
 
 {% block app_content %}
-    <h1>Place 'Bets' on NBA Games</h1>
-    {% for bet in live_bets %}
-    <div><p>{{ bet.team1 }} {{ bet.line1 }} <b>vs.</b> {{ bet.team2 }} {{ bet.line2 }}</p></div>
+    <h1>Place 'Bets' on NCAA Men's Basketball Games</h1>
+    {% for form in forms %}
+    <div>
+        <p>
+            {{ form.team1.label }} {{ form.line1.label }} ({{form.odds1.label}})
+            <b>vs.</b>
+            {{ form.team2.label }} {{ form.line2.label }} ({{form.odds2.label}})
+        </p>
+    </div>
     <form action="" method="post" novalidate>
         {{ form.csrf_token() }}
-        {{ form.bet_id(value = bet.bet_id) }}
-        {{ form.team1(value = bet.team1) }}
-        {{ form.team2(value = bet.team2) }}
         <p>
-            {{ form.team.label }}<br>
+            Choose your team:<br>
             {{ form.team }}<br>
             {% for error in form.team.errors %}
             <span style="color: red;">[{{ error }}]</span>

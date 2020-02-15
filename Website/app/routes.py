@@ -11,7 +11,7 @@ from app.database.main import *
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('index.html', title='Home', user=user, live_bets=live_bets)
+    return render_template('index.html', title='Home')
 
 # User System Pages
 @app.route('/login', methods=['GET', 'POST'])
@@ -49,6 +49,9 @@ def register():
     if form.validate_on_submit():
         user = User(username=form.username.data)
         user.set_password(form.password.data)
+        #id = randint(0,999999)
+        #update_users({'user_id':id, 'username':form.username.data, 'total':10},
+        #                'C://Users/kelti/Documents/GitHub/TartanHacks2020/website/app/database/data.json')
         db.session.add(user)
         db.session.commit()
         flash('Congratulations, you are now a registered user!')
@@ -80,8 +83,8 @@ def user(username):
     return render_template('user.html', user=user, bets=bets)
 
 # Betting Divisions
-@app.route('/nba', methods=['GET', 'POST'])
-def nba():
+@app.route('/ncaab', methods=['GET', 'POST'])
+def ncaab():
     form = PlaceBetForm()
     live_bets = [
         {
@@ -130,14 +133,26 @@ def nba():
          'odds2' : -110
         },
     ]
+    forms = []
+    for bet in live_bets:
+        forms.append(PlaceBetForm())
+        forms[-1].team.choices = [('left', bet['team1']), ('right', bet['team2'])]
+        forms[-1].bet_id(value = bet['bet_id'])
+        forms[-1].team1.label = bet['team1']
+        forms[-1].team2.label = bet['team2']
+        forms[-1].line1.label = bet['line1']
+        forms[-1].line2.label = bet['line2']
+        forms[-1].odds1.label = bet['odds1']
+        forms[-1].odds2.label = bet['odds2']
+
     if form.validate_on_submit():
         flash('Bet of {} placed for {}'.format(
             form.bet.data, form.team.data))
         if form.team.data == 'left':
-            team = form.team1.data
+            team = form.team1.label
         else:
-            team = form.team2.data
+            team = form.team2.label
         new_user_bets({'user_id':"508234", 'bet_id':form.bet_id.data, 'team':team, 'value':form.bet.data},
                         'C://Users/kelti/Documents/GitHub/TartanHacks2020/website/app/database/data.json')
-        return redirect(url_for('nba'))
-    return render_template('nba.html', title='SafeBet - NBA', form=form, live_bets=live_bets)
+        return redirect(url_for('ncaab'))
+    return render_template('ncaab.html', title='SafeBet - NCAAB', forms=forms, live_bets=live_bets)
