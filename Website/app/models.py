@@ -3,13 +3,17 @@ from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 from hashlib import md5
 
+def query_user(username):
+    user = get_user(username)
+    return User(user['user_id'], user['username'], user['password'])
+
 class User(UserMixin):
     # id = get_ids (all)
-    id = ['000001', '508234', '012345']
+    #id = ['000001', '508234', '012345']
     # username = get_usernames (all)
-    username = ['keltin_7', 'RonSwanson', 'peepee']
+    #username = ['keltin_7', 'RonSwanson', 'peepee']
     # password_hash = get_hashed_passwords
-    password_hash = ['kjnfd', '2436', '?']
+    #password_hash = ['kjnfd', '2436', '?']
     # bets = get_bet_table
 
     def __init__(self, id, username, password_hash):
@@ -33,4 +37,5 @@ class User(UserMixin):
 
 @login.user_loader
 def load_user(id):
+    # return User.query.get(int(id))
     return User(id='012345',username='peepee',password_hash='?') #*******************
