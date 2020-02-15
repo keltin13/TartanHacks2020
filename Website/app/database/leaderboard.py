@@ -1,9 +1,10 @@
 #get a list of tuples of userids and total money and order them
-from data import *
+#from data import *
+from app.database.main import *
 
 
 def calc_leaderboard():
-    users = retrieve_database("data.json")["users"]
+    users = retrieve_database('C://Users/kelti/Documents/GitHub/TartanHacks2020/website/app/database/data.json')["users"]
     ids = []
     money = []
     result = []
@@ -14,7 +15,6 @@ def calc_leaderboard():
     for j in range(len(users)):
         result.append((ids[j], money[j]))
     result.reverse()
-    print (result)
     return result
 
 
@@ -49,5 +49,3 @@ def mergeSort(a, b):
             end = min(start1 + 2*step, n)
             merge(a, b, start1, start2, end)
         step *= 2
-
-leaderboard()
