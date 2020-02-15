@@ -51,7 +51,8 @@
                 "team": "Duke",
                 "value": 50,
                 "winnings": 130.75,
-                "net": 80.75
+                "net": 80.75,
+                "timestamp" : 0
             }
         ]
     },
