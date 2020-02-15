@@ -27,6 +27,13 @@
             <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
         </p>
+        <p>
+            {{ form.index.label }}<br>
+            {{ form.bet_id.label }}<br>
+            {{ form.index(size=32) }}<br>
+            {% for error in form.index.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
         <p>{{ form.placeBet() }}</p>
         <hr>
     </form>

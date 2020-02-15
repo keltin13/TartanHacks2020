@@ -1,4 +1,5 @@
 import random
+from data import *
 
 def demo_game():
     nba_teams = ["Atlanta Hawks", "Boston Celtics", "Brooklyn Nets",

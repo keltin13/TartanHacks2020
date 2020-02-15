@@ -1,15 +1,20 @@
 #get a list of tuples of userids and total money and order them
+from data import *
 
-def leaderboard(vals):
-    ids = lst[]
-    money = lst[]
-    result = lst[]
-    for i in range(len(vals)):
-        ids.append(vals[0])
-        money.append(vals[1])
+
+def leaderboard():
+    users = retrieve_database("data.json")["users"]
+    ids = []
+    money = []
+    result = []
+    for key in users:
+        ids.append(users[key]["username"])
+        money.append(users[key]["total"])
     mergeSort(money, ids)
-    for j in range(len(vals)):
+    for j in range(len(users)):
         result.append((ids[j], money[j]))
+    result.reverse()
+    print (result)
     return result
     
     
@@ -44,3 +49,5 @@ def mergeSort(a, b):
             end = min(start1 + 2*step, n)
             merge(a, b, start1, start2, end)
         step *= 2
+
+leaderboard()

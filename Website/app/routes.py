@@ -5,6 +5,7 @@ from app.forms import *
 from app.models import User
 from random import randint
 import sys
+from app.database.scrape import *
 from app.database.main import *
 
 # Home Page
@@ -21,18 +22,12 @@ def login():
     form = LoginForm()
     if form.validate_on_submit():
         # Get the user from the database
-        user = User(id='012345',username='peepee',password_hash='?')#User.query.filter_by(username=form.username.data).first()
-        print(form.password.data)
+        user = User.query_username(form.username.data)
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
             return redirect(url_for('login'))
         # Then login the user
         login_user(user, remember=form.remember_me.data)
-        #flash('Login requested for user {}, password: {},remember_me={}'.format(
-        #    form.username.data, form.password.data, form.remember_me.data))
-        #id = randint(0,999999)
-        #update_users({'user_id':id, 'username':form.username.data, 'total':10},
-        #                'C://Users/kelti/Documents/GitHub/TartanHacks2020/website/app/database/data.json')
         return redirect(url_for('index'))
     return render_template('login.html', title='Sign In', form=form)
 
@@ -47,112 +42,58 @@ def register():
         return redirect(url_for('index'))
     form = RegistrationForm()
     if form.validate_on_submit():
-        user = User(username=form.username.data)
-        user.set_password(form.password.data)
-        #id = randint(0,999999)
-        #update_users({'user_id':id, 'username':form.username.data, 'total':10},
-        #                'C://Users/kelti/Documents/GitHub/TartanHacks2020/website/app/database/data.json')
-        db.session.add(user)
-        db.session.commit()
-        flash('Congratulations, you are now a registered user!')
-        return redirect(url_for('login'))
+        id = randint(0,999999)
+        user = User(id, form.username.data, form.password.data)
+        #user.set_password(form.password.data)
+        update_users({'user_id':id, 'username':form.username.data, 'total':10, 'password_hash':form.password.data},
+                        'C://Users/kelti/Documents/GitHub/TartanHacks2020/website/app/database/data.json')
+        login_user(user)
+        return redirect(url_for('index'))
     return render_template('register.html', title='Register', form=form)
 
 @app.route('/user/<username>')
 @login_required
 def user(username):
     # Get the user from the database
-    user = User(id='012345',username='peepee',password_hash='?')#User.query.filter_by(username=username).first_or_404()
-    bets =  [
-                {
-                    "bet_id": "234798",
-                    "team": "Duke",
-                    "value": 50,
-                    "winnings": 130.75,
-                    "net": 80.75
-                },
-                {
-                    "bet_id": "000001",
-                    "team": "Clippers",
-                    "value": 100,
-                    "winnings": 0,
-                    "net": -100,
-                    "timestamp": 1581744828.133449
-                }
-            ]
+    user = User.query_username(username)
+    bets = User.query_user_bets(user.id)
     return render_template('user.html', user=user, bets=bets)
 
 # Betting Divisions
 @app.route('/ncaab', methods=['GET', 'POST'])
 def ncaab():
-    form = PlaceBetForm()
-    live_bets = [
-        {
-         'bet_id' : "000001",
-         'team1' : 'Clippers',
-         'team2' : 'Celtics',
-         'line1' : 1,
-         'line2' : -1,
-         'odds1' : -110,
-         'odds2' : -110
-        },
-        {
-         'bet_id' : "000001",
-         'team1' : 'Clippers',
-         'team2' : 'Celtics',
-         'line1' : 1,
-         'line2' : -1,
-         'odds1' : -110,
-         'odds2' : -110
-        },
-        {
-         'bet_id' : "000001",
-         'team1' : 'Clippers',
-         'team2' : 'Celtics',
-         'line1' : 1,
-         'line2' : -1,
-         'odds1' : -110,
-         'odds2' : -110
-        },
-        {
-         'bet_id' : "000001",
-         'team1' : 'Clippers',
-         'team2' : 'Celtics',
-         'line1' : 1,
-         'line2' : -1,
-         'odds1' : -110,
-         'odds2' : -110
-        },
-        {
-         'bet_id' : "000001",
-         'team1' : 'Clippers',
-         'team2' : 'Celtics',
-         'line1' : 1,
-         'line2' : -1,
-         'odds1' : -110,
-         'odds2' : -110
-        },
-    ]
+    #form = PlaceBetForm()
+    live_bets = User.query_league_bets('NCAA')
     forms = []
-    for bet in live_bets:
+    i = 0
+    for key in live_bets:
+        bet = live_bets[key]
+        #print(bet)
         forms.append(PlaceBetForm())
-        forms[-1].team.choices = [('left', bet['team1']), ('right', bet['team2'])]
-        forms[-1].bet_id(value = bet['bet_id'])
-        forms[-1].team1.label = bet['team1']
-        forms[-1].team2.label = bet['team2']
+        forms[-1].team.choices = [('left', bet['team-1']), ('right', bet['team-2'])]
+        forms[-1].bet_id.label = key
+        forms[-1].team1.label = bet['team-1']
+        forms[-1].team2.label = bet['team-2']
         forms[-1].line1.label = bet['line1']
         forms[-1].line2.label = bet['line2']
         forms[-1].odds1.label = bet['odds1']
         forms[-1].odds2.label = bet['odds2']
 
-    if form.validate_on_submit():
-        flash('Bet of {} placed for {}'.format(
-            form.bet.data, form.team.data))
-        if form.team.data == 'left':
-            team = form.team1.label
-        else:
-            team = form.team2.label
-        new_user_bets({'user_id':"508234", 'bet_id':form.bet_id.data, 'team':team, 'value':form.bet.data},
-                        'C://Users/kelti/Documents/GitHub/TartanHacks2020/website/app/database/data.json')
-        return redirect(url_for('ncaab'))
+    for form in forms:
+        if form.validate_on_submit() and form.bet_id.label == form.index.data:
+            flash('Bet placed!')
+            if form.team.data == 'left':
+                team = live_bets[form.index.data]['team-1']
+            else:
+                team = live_bets[form.index.data]['team-2']
+            print(team)
+            new_user_bets({'user_id':current_user.id, 'bet_id':form.bet_id.label, 'team':team, 'value':form.bet.data},
+                            'C://Users/kelti/Documents/GitHub/TartanHacks2020/website/app/database/data.json')
+            return redirect(url_for('ncaab'))
+
     return render_template('ncaab.html', title='SafeBet - NCAAB', forms=forms, live_bets=live_bets)
+
+@app.route('/leaderboard')
+def index():
+    
+    return render_template('leaderboard.html', title='Leaderboard')
