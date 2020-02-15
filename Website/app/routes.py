@@ -7,6 +7,7 @@ from random import randint
 import sys
 from app.database.scrape import *
 from app.database.main import *
+from app.
 
 # Home Page
 @app.route('/')
@@ -95,5 +96,5 @@ def ncaab():
 
 @app.route('/leaderboard')
 def index():
-    
+
     return render_template('leaderboard.html', title='Leaderboard')
